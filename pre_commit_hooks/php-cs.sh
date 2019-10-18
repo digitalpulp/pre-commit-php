@@ -42,6 +42,7 @@ else
 fi
 
 phpcs_files_to_check="${@:2}"
+phpcs_files_to_check="${phpcs_files_to_check//\\/\/\/}"
 phpcs_args=$1
 phpcs_command="$phpcs_command $phpcs_args $phpcs_files_to_check"
 
