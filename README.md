@@ -38,6 +38,7 @@ A systems hook that just runs `php -l` against stage files that have the `.php` 
   rev: 1.4.0
   hooks:
   - id: php-unit
+    args: [--debug]
 ```
 
 A bash script that will run the appropriate phpunit executable. It will assume
@@ -46,6 +47,8 @@ A bash script that will run the appropriate phpunit executable. It will assume
   - There is already a `phpunit.xml` in the root of the repo
 
 Note in its current state, it will run the whole PHPUnit test as along as `.php` file was committed.
+
+An `args` property in your hook declaration can be used for passing any valid PHPUnit arguments.
 
 ## php-cs
 
