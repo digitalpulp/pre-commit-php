@@ -9,7 +9,7 @@
 # - php
 #
 # Arguments
-# - None
+# See: https://phpunit.readthedocs.io/en/9.0/textui.html
 
 # Plugin title
 title="PHP Unit Task Runner"
@@ -26,8 +26,12 @@ source $DIR/helpers/formatters.sh
 source $DIR/helpers/welcome.sh
 source $DIR/helpers/locate.sh
 
-echo -e "${bldwht}Running command ${txtgrn} ${exec_command}"
-command_result=`eval $exec_command`
+command_args=$1
+command_to_run="${exec_command} ${command_args}"
+
+echo -e "${bldwht}Running command ${txtgrn} ${exec_command} ${command_args}"
+hr
+command_result=`eval $command_to_run`
 if [[ $command_result =~ FAILURES ]]
 then
     hr
