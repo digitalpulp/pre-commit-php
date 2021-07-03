@@ -4,7 +4,7 @@ Pre-commit scripts appropriate for *any* PHP project. These hooks are made as cu
 
 # Setup
 
-See (Adding pre-commit plugins to your project)[https://pre-commit.com/#adding-pre-commit-plugins-to-your-project]
+See [Adding pre-commit plugins to your project](https://pre-commit.com/#adding-pre-commit-plugins-to-your-project)
 
 # Supported Hooks
 
